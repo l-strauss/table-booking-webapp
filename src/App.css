@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+:root {
+  --color-1:#495E57;
+  --color-2:#F4CE14;
+  --color-5:#EE9972;
+  --color-4:#FBDABB;
+  --color-5:#EDEFEE;
+  --color-6:#333333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.footer, .header, .main {
+  margin: 1rem auto;
+  max-width: 820px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header * {
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav li {
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 12pt;
+  font-weight: 800;
+  font-family: 'Karla', sans-serif;
+}
+
+.nav li a:link{
+  text-decoration: none;
+}
+
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .footer {
+    grid-template-columns: repeat(4, auto);
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.footer p {
+  display: inline-block;
+  margin: 0.6rem 1rem;
+  font-size: 12pt;
+  font-weight: 800;
+  font-family: 'Karla', sans-serif;
+}
+
+h1 {
+  font-size: 64pt;
+  font-weight: 500;
+  font-family: 'Markazi Text', serif;
+}
+
+h2 {
+  font-size: 40pt;
+  font-weight: 400;
+  font-family: 'Markazi Text', serif;
+}
+
+h3 {
+  font-size: 20pt;
+  font-weight: 800;
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 16pt;
+  font-weight: 800;
+  font-family: 'Karla', sans-serif;
+}
+
+h4 {
+  font-size: 18pt;
+  font-weight: 700;
+  font-family: 'Karla', sans-serif;
+}
+
+p {
+  font-size: 16pt;
+  font-weight: 400;
+  font-family: 'Karla', sans-serif;
+  line-height: 1.5;
+  max-width: 65ch;
+}
+
+span {
+  font-size: 16pt;
+  font-weight: 500;
+  font-family: 'Karla', sans-serif;
+}
+
+.lead-text {
+  font-size: 18pt;
+  font-weight: 500;
+  font-family: 'Karla', sans-serif;
 }
