@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <img src="/Logo .svg" alt="Logo"></img>
-            <div>
+            <div className="footer-section">
                 <p>Doormat Navigation</p>
                 <ul>
                     <li><a href="/#">Home</a></li>
@@ -13,7 +13,7 @@ const Footer = () => {
                     <li><a href="/#">Login</a></li>
                 </ul>
             </div>
-            <div>
+            <div className="footer-section">
                 <p>Contact</p>
                 <ul>
                     <li>Address</li>
@@ -21,7 +21,7 @@ const Footer = () => {
                     <li>Email</li>
                 </ul>
             </div>
-            <div>
+            <div className="footer-section">
                 <p>Social Media Links</p>
                 <ul>
                     <li><a href="/#">Facebook</a></li>
