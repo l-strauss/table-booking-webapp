@@ -261,6 +261,19 @@ button {
 
 }
 
+/* Booking */
+
+.bookingPage {
+  grid-column: 3 / -3;
+}
+
+.bookingForm {
+  margin: auto;
+  display: grid;
+  max-width: 200px;
+  gap: 20px;
+}
+
 /* Footer */
 
 .footer {
