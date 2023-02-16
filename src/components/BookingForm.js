@@ -13,22 +13,29 @@ const BookingForm = (props) => {
 
     }
 
+    const [isValid, setIsValid] = useState(false);
+
+    function handleValidityChange(event) {
+        setIsValid(event.currentTarget.form.checkValidity());
+      }
+
     return (
         <form className="bookingForm" onSubmit={submitHandler}>
             <label htmlFor="res-date">Choose date</label>
-            <input type="date" id="res-date" onChange={(e) => {setDate(e.target.value); props.setAvailableTimes({date: e.target.value})}}/>
+            <input type="date" id="res-date" onChange={(e) => {setDate(e.target.value); props.setAvailableTimes({date: e.target.value}); handleValidityChange(e)}} required/>
             <label htmlFor="res-time">Choose time</label>
-            <select id="res-time " onChange={(e) => setTime(e.target.value)}>
+            <select id="res-time " onChange={(e) => {setTime(e.target.value); handleValidityChange(e)}} required>
                 {props.availableTimes.map(time => <option key={time}>{time}</option>)}
             </select>
             <label htmlFor="guests">Number of guests</label>
-            <input type="number" placeholder="1" min="1" max="10" id="guests" onChange={(e) => setNumber(e.target.value)}/>
+            <input type="number" min="1" max="10" id="guests" onChange={(e) => {setNumber(e.target.value); handleValidityChange(e)}} required/>
             <label htmlFor="occasion">Occasion</label>
             <select id="occasion" onChange={(e) => setOccasion(e.target.value)}>
+                <option></option>
                 <option>Birthday</option>
                 <option>Anniversary</option>
             </select>
-            <input type="submit" value="Make Your reservation"/>
+            <input className="submit-btn" type="submit" value="Reservation" disabled={!isValid}/>
         </form>
     )
 }

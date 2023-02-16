@@ -1,9 +1,10 @@
 const ConfirmedBooking = () => {
     return (
-        <>
-            <h1>All set!</h1>
-            <h3>Your booking is confirmed</h3>
-        </>
+        <div className="confirmation">
+            <h3>All set!</h3>
+            <h4>Your booking is confirmed</h4>
+            <img src="./Mario and Adrian A.jpg"></img>
+        </div>
     )
 }
 

@@ -244,7 +244,6 @@ button {
     position: absolute;
     width: 240px;
   }
- 
 
   .specials {
     grid-column: 3 / -3;
@@ -263,15 +262,85 @@ button {
 
 /* Booking */
 
-.bookingPage {
-  grid-column: 3 / -3;
+.bookingPage, .confirmation {
+  padding: 0 1rem;
+  grid-column: 1 / span 4;
+  background-color: #495E57;
+}
+
+.bookingPage h3 {
+  margin-bottom: 60px;
+  color: #F4CE14;
 }
 
 .bookingForm {
-  margin: auto;
   display: grid;
-  max-width: 200px;
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 300px;
+  gap: 30px 20px;
+  margin-bottom: 30px;
+}
+
+.bookingForm label {
+  font-size: 16pt;
+  font-weight: 700;
+  font-family: 'Karla', sans-serif;
+  align-self: center;
+  color: #EDEFEE;
+}
+
+.bookingForm input, select {
+  font-size: 14pt;
+  font-weight: 400;
+  font-family: 'Karla', sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border-width: 1px;
+}
+
+.bookingForm .submit-btn {
+  background-color: #F4CE14;
+  font-family: 'Karla', sans-serif;
+  font-size: 14pt;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1.5rem;
+  border-style: hidden;
+  margin: auto 0;
+  margin-top: 2rem;
+}
+
+.confirmation {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.confirmation h3 {
+  color: #F4CE14;
+  margin-bottom: 10px;
+}
+
+.confirmation h4 {
+  color: #EDEFEE;
+  margin: 10px 0 20px;
+}
+
+.confirmation img {
+  width: 90%;
+  justify-self: center;
+}
+
+@media (min-width: 600px) {
+  .bookingPage, .confirmation {
+    grid-column: 3 / -3;
+  }
+
+  .bookingForm {
+    max-width: 500px;
+    margin-bottom: 100px;
+  }
 }
 
 /* Footer */
